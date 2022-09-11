@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res.send("Hello World")
 })
 
-app.use(cors({ origin: process.env.CLIENT_APP }))
+app.use(cors({ origin: process.env.CLIENT_APP, optionsSuccessStatus: 200 }))
 
 // !important use code below for loacl dev if the peer server is down or not working ⬇️
 // const { PeerServer } = require("peer")
