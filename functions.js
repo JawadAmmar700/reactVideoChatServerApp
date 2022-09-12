@@ -3,7 +3,6 @@ let username = null
 const addUser = ({ username, roomId, userId, photoUrl }) => {
   const user = { username, roomId, userId, photoUrl }
   users.push(user)
-  console.log(users)
   return user
 }
 
@@ -12,7 +11,6 @@ const removeUser = ({ roomId, userId }) => {
     user => user.userId === userId && user.roomId === roomId
   )
   users.splice(index, 1)
-  console.log("remove", users)
   return userId
 }
 
